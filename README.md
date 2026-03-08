@@ -1,9 +1,9 @@
-*simple real CI/CD practice project** using:
+*simple real CI/CD practice project* using:
 
 - Jenkins
 - GitHub
 - Docker
-
+- AWS EC2 Service
 
 This is a **basic CI/CD pipeline**.
 
@@ -125,20 +125,15 @@ set useranme and password and login
 
 # 8️⃣ Create Jenkins Pipeline Job
 In Jenkins dashboard:
-```
+click 
 New Item
-```
-Name:
 
+Name:
 ```
 docker-demo-pipeline
 ```
 Select:
-
-```
 Pipeline
-```
----
 
 # 9️⃣ Pipeline Script
 Paste this in **Pipeline Script** section:
@@ -153,7 +148,7 @@ stages {
         steps {
             git branch: 'main', url: 'https://github.com/YOUR_USERNAME/jenkins-docker-demo.git'             
             
-            # if your branch is main or any other instead of master then only add branch: 'main' #
+            # if your branch is main or any other instead of master then only add branch: 'main'
         }
     }
 
