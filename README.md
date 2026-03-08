@@ -83,22 +83,25 @@ git remote add origin https://github.com/YOUR_USERNAME/jenkins-docker-demo.git
 git push -u origin main
 ```
 
-# 7️⃣ Install Docker on Jenkins Server
+# 7️⃣ Install Docker, Jenkins on Server
 On your EC2 server:
-we already install jenkins on ec2 if you not install then follow this steps
+```
 sudo apt update
 sudo apt install fontconfig openjdk-21-jre
 java -version 
-
+```
+```
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
   
 echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-  
+```
+```
 sudo apt update
 sudo apt install jenkins
+```
 
 ```bash
 sudo apt update
