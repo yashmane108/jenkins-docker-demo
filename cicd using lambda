@@ -1,7 +1,18 @@
 On Amazon Linux
 
 sudo yum update
-sudo yum install python3-pip git -y
+
+install python
+sudo yum install python3 -y
+
+install pip 
+sudo yum install python3-pip -y
+
+install git
+sudo yum install git 
+
+you can also combine that 
+
 python3 -m pip install flask
 python3 -m flask --version
 nano app.py -> paste app.py from this repo | must add 5000 port in ec2 SG
